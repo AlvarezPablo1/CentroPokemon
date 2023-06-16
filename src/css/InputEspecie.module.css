@@ -1,0 +1,164 @@
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(0,0,0,0.5); */
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hideOverlay {
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  top: 102vh;
+  left: 12%;
+  transform: translateY(-100%);
+  padding: 1rem;
+  background-color: white;
+  border-radius: 4px;
+  border: 1.5px solid rgb(96, 96, 96);
+  box-shadow: 0px 0px 20px -18px;
+  height: 30rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: 100ms;
+  z-index: 2;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+@media (min-width: 600px) {
+  .popup {
+      min-width: 465px;
+  }
+}
+
+.popup h4 {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.pokemonList {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+  padding-right: 0.5rem;
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemonList article {
+  border: 1px solid #ed5564;
+  border-radius: 4px;
+  display: flex;
+}
+
+.pokemonList article button {
+  background-color: white;
+  border-radius: inherit;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  transition: 100ms;
+  width: 100%;
+}
+
+.pokemonList article button:hover {
+  filter: brightness(90%);
+}
+
+.pokemonList article button img {
+  width: 100%;
+}
+
+.pageButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pageButtons button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.pageButtons button:disabled {
+  filter: grayscale(100%);
+  cursor: default;
+}
+
+.hidePopup {
+  opacity: 0;
+  pointer-events: none;
+}
+ç
+
+
+.pokemonList::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.pokemonList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.pokemonList::-webkit-scrollbar-thumb {
+  background: #ed5564;
+}
+
+/* Handle on hover */
+.pokemonList::-webkit-scrollbar-thumb:hover {
+  background: #d24150;
+}
+
+
+@media(max-width: 768px){
+  .pokemonList{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .popup{
+    top: 132vh;
+    left: auto;
+  }
+}
+
+
+@media(max-width: 425px){
+  .popup{
+    top:130vh;
+    left: 6%;
+  }
+}
+
+@media(max-width: 320px){
+  .pokemonList{
+    grid-template-columns: 1fr 1fr;
+  }
+  .popup{
+    top:130vh;
+    left: 12%;
+  }
+}

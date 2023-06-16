@@ -1,0 +1,88 @@
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ed5564;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Pokemon", sans-serif;
+}
+
+.formHeader a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+.formHeader div {
+  display: flex;
+  align-items: center;
+}
+
+.formHeader img {
+  width: 50px;
+  margin-right: 3rem;
+}
+
+.volver {
+  display: flex;
+  align-items: center;
+}
+
+.formularioIngreso {
+  color: #ed5564;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.formularioIngreso h3 {
+  width: 100%;
+  padding: 1rem;
+}
+
+.formularioIngreso .cuerpoFormulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 90%;
+}
+
+.cuerpoFormulario .inputs {
+  width: 40%;
+  margin-left: 2rem;
+}
+
+.nombreSeccion {
+  text-align: left;
+  margin-top: 2rem;
+  color: blue;
+  display: flex;
+  align-items: center;
+}
+
+.nombreSeccion img {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+@media(max-width : 425px){
+
+  .volver h2{
+    display: none;
+
+  }
+
+  .cuerpoFormulario .inputs {
+    width: auto;
+    margin-left: 0%;
+  }
+
+  .formularioIngreso .cuerpoFormulario {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+

@@ -1,0 +1,51 @@
+.detalleFormulario {
+  width: 50%;
+  border: 1px solid darkgray;
+  border-radius: 6px;
+  box-shadow: 5px 5px lightgray;
+  margin-left: 2rem;
+}
+
+.detalleFormulario .encabezado {
+  max-width: 100%;
+  background-color: #ed5564;
+  color: whitesmoke;
+}
+
+.datosCliente .fila {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0px 1rem;
+  flex-wrap: wrap;
+  color: #ed5564;
+}
+
+.botonEnviar {
+  padding: 0.6rem 3rem;
+  border-radius: 10px;
+  background-color: #ed5564;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Pokemon", sans-serif;
+  border: none;
+  box-shadow: 4px 4px 4px lightgray;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+}
+
+.botonEnviar:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+
+@media(max-width: 425px){
+  .detalleFormulario{
+    margin-top: 2rem;
+    width: auto;
+    margin-left: 0%;
+  }
+}

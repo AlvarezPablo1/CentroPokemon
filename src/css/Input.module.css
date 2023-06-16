@@ -1,0 +1,57 @@
+.inputContenedor {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.inputContenedor input {
+  border-radius: 10px;
+  border-style: solid;
+}
+
+
+.inputContenedor input, select {
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  outline: none;
+  border: 1.5px solid lightgrey;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+  box-sizing: border-box;
+}
+
+.inputContenedor input:hover, select:hover {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0px 0px 20px -17px;
+}   
+
+.inputContenedor input:active {
+  transform: scale(0.95);
+}
+
+.inputContenedor label {
+    font-size: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+    .inputContenedor {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .inputContenedor input, select {
+        width: calc(100% - 6rem);
+    }
+}
+
+.inputContenedor input:focus {
+  border: 1px solid grey;
+}
+
+
